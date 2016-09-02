@@ -216,7 +216,9 @@ foo.awe();//HELLO ZRY
 - 表现层：按钮使用现有的ui组件
 - 逻辑层：按钮事件等逻辑处理
 组件化会单独写一个博客分析。
-参考阅读：
+
+**参考阅读：**
+
 - [Git 常用命令详解](http://blog.csdn.net/sunboy_2050/article/details/7529022)
 - [SASS用法指南-阮一峰](http://www.ruanyifeng.com/blog/2012/06/sass.html)
 - [SASS入门](http://www.w3cplus.com/)
