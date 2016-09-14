@@ -30,13 +30,14 @@ categories: 前端技术
       + js/             # 编译输出的公共js目录
       + css/            # 编译输出的公共css目录
       + img/            # 编译输出的公共图片目录
-  index.html            # 系统html入口
+    - index.html        # 系统html入口
   webpack.config.js     # webpack配置文件
   package.json          # 项目配置
   .babelrc              # 配置es-2015
   README.md             # 项目说明
   ```
 将上两篇博客`webpack基础实践1-2`中的例子配置文件改成如下
+
 ```javascript
 var path = require("path");
 
@@ -45,12 +46,13 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'dist','home'),
         filename: "bundle.js",
+        publicPath:'./images/'//可以限定图片生成位置的路径
     },
     module: {
         loaders: [
             { test: /\.css$/, loader: "style!css" }, //css加载器
             { test: /\.scss$/, loader: "style!css!sass" }, //sass加载器
-            { test: /\.(jpg|png)$/, loader: "url?limit=8192" }, //图片加载器
+            { test: /\.(jpg|png)$/, loader: "url?limit=8192&name=../images/[hash].[ext]" }, //图片加载器[name].[ext]  limit 是限制大小，大于这个尺寸会是单独的图片，小于这个尺寸是base64的形式
             { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader', }//babel加载器
         ]
     }
@@ -71,7 +73,7 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")}, //css加载器
-            { test: /\.scss$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")}, //sass加载器
+            { test: /\.scss$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")}, //sass加载器
         ]
     },
     plugins: [
@@ -82,16 +84,16 @@ module.exports = {
 此时在html文件中引入就可以了
 
 ```html
-<link rel="stylesheet" href="dist/home/main.css">
+<link rel="stylesheet" href="./home/main.css">
 ```
 # 3.多入口
 为了模拟数据，我们在`home`文件夹下新建了一个`entry2.js`入口
 
 ```javascript
-var m2 = require("./js/module2.js");
+var m2 = require("./module2.js");
 document.write(m2);
 /*es6*/
-require("./js/es6test2.js");
+require("./es6test2.js");
 ```
 配置文件如下
 
@@ -112,8 +114,8 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")}, //css加载器
-            { test: /\.scss$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")}, //sass加载器
-            { test: /\.(jpg|png)$/, loader: "url?limit=8192" }, //图片加载器
+            { test: /\.scss$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")}, //sass加载器
+            { test: /\.(jpg|png)$/, loader: "url?limit=8192&name=../images/[hash].[ext]" },
             { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader', }
         ]
     },
@@ -130,13 +132,13 @@ module.exports = {
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="dist/home/page1.css">
-    <link rel="stylesheet" href="dist/home/page2.css">
+    <link rel="stylesheet" href="./home/page1.css">
+    <link rel="stylesheet" href="./home/page2.css">
 </head>
 
 <body>
-    <script src="dist/home/page1.js"></script>
-    <script src="dist/home/page2.js"></script>
+    <script src="./home/page1.js"></script>
+    <script src="./home/page2.js"></script>
     <div class="img"></div>
 </body>
 
