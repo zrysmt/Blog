@@ -26,7 +26,7 @@ ES5之前Object.create Poyfill代码：
 	if(!Object.create){
 		Object.create = function(o){
 			function F(){};
-			F.prototype = 0;
+			F.prototype = o;
 			return new F();  //new的作用参见上述 第二种方式
 		}
 	}
@@ -43,25 +43,25 @@ ES5:``Object.setPrototypeOf(Bar.prototype,Foo.prototype)``更加标准可靠
 OO风格：  
 ```javascript
 	function Foo(who){
-			this.name = who;
-		}
-		Foo.prototype.identity = function(){
-			return "I am "+this.name;
-		};
+		this.name = who;
+	}
+	Foo.prototype.identity = function(){
+		return "I am "+this.name;
+	};
 
-		function Bar(who){
-			Foo.call(this,who);
-		}
-		Bar.prototype = Object.create(Foo.prototype);
+	function Bar(who){
+		Foo.call(this,who);
+	}
+	Bar.prototype = Object.create(Foo.prototype);
 
-		Bar.prototype.speak = function(){
-			alert("hello,"+this.identity()+" .");
-		};
+	Bar.prototype.speak = function(){
+		alert("hello,"+this.identity()+" .");
+	};
 
-		var b1 = new Bar('b1');
-		var b2 = new Bar('b2');
-		b1.speak();
-		b2.speak();
+	var b1 = new Bar('b1');
+	var b2 = new Bar('b2');
+	b1.speak();
+	b2.speak();
 ```
 
 OLOO风格：
