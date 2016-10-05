@@ -1,5 +1,5 @@
 ---
-title: rollup+es6最佳实践
+title: rollup + es6最佳实践
 tags: 
 - FE
 - javascript
@@ -61,7 +61,7 @@ rollup src/jquery.js --output bundle.js -f cjs
 ```
 ### 3.1.1 编译成commonjs格式的文件
 
-```
+```javascript
 'use strict';
 
 var init = function(jQuery){
@@ -103,7 +103,8 @@ export default jQuery;
 我们使用配置方式进行编译,就能指定导出的模块名`moduleName: 'jQuery'`
 ## 3.2 配置编译--rollup -c rollup.config.dev.js
 `rollup.config.dev.js`
-```
+
+```javascript
 import babel from 'rollup-plugin-babel';
 
 export default {
@@ -140,7 +141,8 @@ rollup -c rollup.config.dev.js
 ```
 ## 3.3 配置编译--node rollup.config.dev.js
 `rollup.config.dev.js`
-```
+
+```javascript
 var rollup = require( 'rollup' );
 var babel = require('rollup-plugin-babel');
  
