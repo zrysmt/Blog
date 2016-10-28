@@ -1,5 +1,5 @@
 ---
-title: 一步一步DIY一个自己jQuery库3-jquery+sizzle引擎
+title: 一步一步DIY jQuery库3-引入sizzle引擎
 tags:    
 - FE
 - jQuery
@@ -7,9 +7,9 @@ tags:
 categories: 前端技术
 ---
 
-所有代码挂在我的[github](https://github.com/zrysmt/DIY-jQuery)中
+【注】所有代码挂在我的[github](https://github.com/zrysmt/DIY-jQuery)上
 
-在前两篇的基础上，正式引入sizzle引擎，我们不详细介绍该引擎，会使用即可。
+在前两篇的基础上，正式引入sizzle引擎，这里不详细介绍sizzle引擎。
 
 我们在前两篇的`jQuery.fn.init`的方法是
 
@@ -35,6 +35,7 @@ var init = function(jQuery){
 
 # 1.引入Sizzle引擎
 下载Sizzle，将`sizzle.js`文件复制在`src/sizzle`中，并且改造Sizzle成模块化的
+
 ```javascript
 //1-头部注释
 //(function( window ) { 
@@ -56,6 +57,7 @@ var init = function(jQuery){
 export default Sizzle;
 ```
 同时增加一个初始化文件`src/sizzle/init.js`
+
 ```javascript
 import Sizzle from './sizzle.js';
 

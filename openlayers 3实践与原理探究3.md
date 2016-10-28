@@ -7,8 +7,11 @@ tags:
 - WebGIS
 categories: WebGIS
 ---
-接着我们看一个比较长的例子，例子实现的是可以绘制图形，可以根据自己的设置打印地图
+【注】所有代码挂在我的[github](https://github.com/zrysmt/openlayers-3)上，本例对应`demo3`
+
+接着我们看一个比较长的例子，例子实现的是可以绘制图形，可以根据自己的设置打印地图。
 我们先看显示效果是：
+
 ![ol3完整例子显示效果](https://raw.githubusercontent.com/zrysmt/mdPics/master/ol/ol3%E4%B8%80%E4%B8%AA%E5%AE%8C%E6%95%B4%E7%9A%84%E4%BE%8B%E5%AD%90.jpg)
 由于ol3的api现在更新变化挺大的，所以自己运行的例子的时候注意版本是`3.17.1`
 例子中的解释比较详细，不具体进行展开介绍。本例子主要分为三部分，在js文件中已经隔开

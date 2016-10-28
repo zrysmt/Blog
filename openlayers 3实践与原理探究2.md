@@ -7,6 +7,8 @@ tags:
 - WebGIS
 categories: WebGIS
 ---
+【注】所有代码挂在我的[github](https://github.com/zrysmt/openlayers-3)上
+
 # 0.实例
 在OpenLayers3官网的[下载页面](http://openlayers.org/download/)下载我们在开发工程中需要的文件(如：v3.17.1-dist.zip)，实际工程中包含两个文件`ol.js`,`ol.css`
 先看一个实例代码如下：

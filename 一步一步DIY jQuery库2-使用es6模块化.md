@@ -1,5 +1,5 @@
 ---
-title: 一步一步DIY一个自己jQuery库2-es6模块化
+title: 一步一步DIY jQuery库2-使用es6模块化
 tags:    
 - FE
 - jQuery
@@ -7,11 +7,11 @@ tags:
 categories: 前端技术
 ---
 
-有关rollup的安装使用可以查看我的另外一篇博客：[《rollup + es6最佳实践》](http://blog.csdn.net/future_todo/article/details/52725176),这里有提供了简明的搭建环境的说明，我们可以暂时忽略这篇博客，先参见第一部分`1.环境搭建`
+本博文使用了rollup打包，这里同时提供了简明的搭建环境的说明，通过第一部分`1.环境搭建`就可以在本地配置搭建环境。有关rollup的详细安装使用说明可以查看我的另外一篇博客：[《rollup + es6最佳实践》](http://blog.csdn.net/future_todo/article/details/52725176)
 
-我们首先把《一步一步DIY一个自己jQuery库1》的文件打包好
+我们首先把《一步一步DIY一个自己jQuery库1》的代码使用es6模块化的方式打包好
 
-所有代码挂在我的[github](https://github.com/zrysmt/DIY-jQuery)中
+【注】所有代码挂在我的[github](https://github.com/zrysmt/DIY-jQuery)上
 # 1.搭建环境
 ## 1.1 目录结构
 ```
