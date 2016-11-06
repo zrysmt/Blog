@@ -8,6 +8,7 @@ categories: 前端技术
 ---
 domReady机制是很多框架和库都具有的种子模块，使用了在DOM树解析完成后就立即响应，不用等待图片等资源下载完成（onload执行时候表示这些资源完全下载完成）的一种机制，那怎么实现呢。
 
+
 1）支持DOMContentLoaded事件的，就使用DOMContentLoaded事件；
 2）不支持的，就用来自Diego Perini发现的著名Hack兼容。兼容原理大概就是，通过IE中的document.documentElement.doScroll(‘left’)来判断DOM树是否创建完毕或者使用监控script标签的onreadystatechange得到它的readyState属性判断【遗憾的是经过我们的实验，在IE下domReady机制总会在onload后执行】
 # 1. domReady机制在IE7-8下
@@ -31,6 +32,7 @@ demo1.html
     });
     </script>
 </body>
+
 
 </html>
 ```
@@ -103,6 +105,7 @@ dom.Ready(function() {
     console.info("我的domReady3");
 });
 
+
 console.log('在js中');
 window.onload = function(){
   console.log("onload函数");
@@ -110,6 +113,7 @@ window.onload = function(){
 ```
 ## 1.2 背景知识介绍
 - `document.readystate`
+
 
 > **readyState** 属性返回当前文档的状态（载入中……）。
 该属性返回以下值:
@@ -119,9 +123,13 @@ window.onload = function(){
 - complete - 载入完成
 
 
+
+
 - IE的 script的readyState
 FireFox的script 元素不支持onreadystatechange事件，只支持onload事件
 IE的 script 元素支持onreadystatechange事件，不支持onload事件
+
+
 
 
 >只针对IE readyState 的值  可能为 以下几个 :
@@ -132,11 +140,16 @@ IE的 script 元素支持onreadystatechange事件，不支持onload事件
 -   “complete” – 脚本执行完毕
 
 
+
+
 - **defer和onload函数**
+
 
 ```javascript
 <script defer='defer' src="deferjs.js"></script>
 ```
+
+
 
 
 > defer 属性仅适用于外部脚本（只有在使用 src 属性时）
@@ -144,10 +157,12 @@ IE的 script 元素支持onreadystatechange事件，不支持onload事件
 > *   如果不使用 async 且 defer="defer"：脚本将在页面完成解析时执行
 > *   如果既不使用 async 也不使用 defer：在浏览器继续解析页面之前，立即读取并执行脚本
 
+
 ## 1.3 结果分析
 在IE7/8打印的结果是：
-![](0f8201b3-faa9-46ff-ac38-29ac6e6daff8_128_files/9126a45d-aa8b-4349-8993-9bc233da03fe.png)
+![](https://raw.githubusercontent.com/zrysmt/mdPics/master/domReady1.png)
 dom.fireReady函数在onload函数之后执行
+
 
 ## 1.4 IE下监控DOM树是否解析完成的其他做法
 除了使用`document.write("<script id=\"ie-domReady\" defer='defer'src=\"//:\"><\/script>")`还可以监控DOM树是否解析完成
@@ -165,8 +180,9 @@ dom.fireReady函数在onload函数之后执行
 ```
 # 2. domReady机制在chrome中
 将上面的demo2.js文件下注释的jquery的ready函数取消注释进行执行，得到结果是：
-![](0f8201b3-faa9-46ff-ac38-29ac6e6daff8_128_files/eda7dd1a-ea44-49d3-a308-0479aceca793.png)
+![](https://raw.githubusercontent.com/zrysmt/mdPics/master/domReady2.png)
 demo1.html中将script标签放入到`<head>`得到的结果是一样的。
+
 
 **在chrome中的顺序是**：
 + `document.readyState` 为`loading`
@@ -178,10 +194,12 @@ demo1.html中将script标签放入到`<head>`得到的结果是一样的。
 + `document.readyState` 为`compelete`
  - onload函数（打印结果：onload函数）
 
+
 # 3.总结
 1，2区别：
 - 带defer的script标签，IE8以下中不支持defer属性
 - dom.fireReady在IE中的逻辑是在`document.readyState=="compelte"`后，会在onload函数之后紧接着执行,在chrome/Firfox的逻辑是在`document.addEventListener("DOMContentLoaded",function(){})`的回掉函数中。
+
 
 综上所诉，执行的顺序应该为：
 + `document.readyState` 为`loading`
@@ -193,6 +211,8 @@ demo1.html中将script标签放入到`<head>`得到的结果是一样的。
 + 【IE常用来判断DOM树是否解析完成】document.documentElement.doScroll 这时可以让HTML元素使用doScroll方法，抛出错误就是DOM树未解析完成
 + `document.readyState` 为`compelete`
  - onload函数（打印结果：onload函数）【图片flash等资源都加载完毕】
+
+
 
 
 最后附上监测IE，在IE的onload函数后面执行执行的另外一种实现方式
@@ -208,6 +228,7 @@ function IEContentLoaded(w, fn) {
                 fn();
             }
         };
+
 
     (function() {
         try { //在DOM未建完之前调用元素的doScroll抛出错误
@@ -228,11 +249,14 @@ function IEContentLoaded(w, fn) {
 }
 ```
 
+
 参考阅读：
 - 司徒正美 - 《javascript框架设计》
 - [司徒正美-javascript的事件加载](http://www.cnblogs.com/rubylouvre/archive/2009/08/26/1554204.html)
+- [主流JS框架中DOMReady事件的实现](http://www.cnblogs.com/JulyZhang/archive/2011/02/12/1952484.html)
 - [javascript的domReady](http://www.cnblogs.com/rubylouvre/archive/2009/12/30/1635645.html)
 - [document.readyState的属性](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/readyState)
 - [DOMContentLoaded介绍](https://developer.mozilla.org/zh-CN/docs/Web/Events/DOMContentLoaded)
 - [又说 动态加载 script. ie 下 script Element 的 readyState状态](http://www.cnblogs.com/_franky/archive/2010/06/20/1761370.html)
+
 
