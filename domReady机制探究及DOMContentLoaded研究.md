@@ -117,6 +117,7 @@ window.onload = function(){
 
 > **readyState** 属性返回当前文档的状态（载入中……）。
 该属性返回以下值:
+
 - uninitialized - 还未开始载入
 - loading - 载入中
 - interactive - 已加载，文档与用户可以开始交互并引发[DOMContentLoaded](https://developer.mozilla.org/zh-CN/docs/Web/Reference/Events/DOMContentLoaded "/zh-CN/docs/Web/Reference/Events/DOMContentLoaded")事件
@@ -133,6 +134,7 @@ IE的 script 元素支持onreadystatechange事件，不支持onload事件
 
 
 >只针对IE readyState 的值  可能为 以下几个 :
+
 -   “uninitialized” – 原始状态 
 -   “loading” – 下载数据中..
 -   “loaded” – 下载完成
@@ -185,6 +187,7 @@ demo1.html中将script标签放入到`<head>`得到的结果是一样的。
 
 
 **在chrome中的顺序是**：
+
 + `document.readyState` 为`loading`
   - jquery的ready函数外 (打印结果：在js中)
 + `document.readyState` 为`interactive`【DOM解析完成】
@@ -197,11 +200,13 @@ demo1.html中将script标签放入到`<head>`得到的结果是一样的。
 
 # 3.总结
 1，2区别：
+
 - 带defer的script标签，IE8以下中不支持defer属性
 - dom.fireReady在IE中的逻辑是在`document.readyState=="compelte"`后，会在onload函数之后紧接着执行,在chrome/Firfox的逻辑是在`document.addEventListener("DOMContentLoaded",function(){})`的回掉函数中。
 
 
 综上所诉，执行的顺序应该为：
+
 + `document.readyState` 为`loading`
   - jquery的ready函数外
 + 【非IE下】`document.readyState` 为`interactive`【DOM解析完成】
@@ -216,6 +221,7 @@ demo1.html中将script标签放入到`<head>`得到的结果是一样的。
 
 
 最后附上监测IE，在IE的onload函数后面执行执行的另外一种实现方式
+
 ```javascript
 //http://javascript.nwbox.com/IEContentLoaded/
 //by Diego Perini 2007.10.5
