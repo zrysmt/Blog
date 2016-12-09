@@ -1,5 +1,5 @@
 ---
-title: 一步一步DIY zepto库，研究zepto源码7--动画模块(fx，fx_method).md
+title: 一步一步DIY zepto库，研究zepto源码7--动画模块(fx fx_method)
 tags:    
 - FE
 - zepto
