@@ -5,8 +5,8 @@ tags:
 - 设计模式
 categories: 前端技术
 ---
-参考《javascript设计模式》[美]Addy Osmani一书，下面介绍使用javascript经常会使用的主要设计模式。本博文ES6语法的博客，还有使用ES5语法的【上】【下】两篇。
-这里主要是一下几个设计模式：
+参考《javascript设计模式》[美]Addy Osmani一书，下面介绍使用javascript经常会使用的主要设计模式。本博文为ES6语法的博客，还有使用ES5语法的【上】【下】两篇。
+主要是以下几个设计模式：
 
 - Constructor Pattern 构造模式
 - Module Pattern 模块化模式
@@ -26,7 +26,9 @@ categories: 前端技术
 > https://github.com/zrysmt/javascript-design-pattern
 
 # 1.Module Pattern 模块化模式
+
 模块化很好理解，目前很多提供模块化的库如require.js(AMD),sea.js(CMD),现在我们就看看怎样自己编写的代码能够支持模块化。
+
 ```javascript
 let privateName = Symbol('privateName');//利用Symbol做成私有的变量
 //直接用class类
@@ -47,6 +49,7 @@ class MyModule {
 export default Module;
 ```
 # 2.Singleton Pattern 单例模式
+
 确保实例化或者说是创建对象的时候只实例化/创建一次。
 
 - 一般的单例模式

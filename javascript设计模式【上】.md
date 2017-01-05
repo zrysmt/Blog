@@ -5,8 +5,8 @@ tags:
 - 设计模式
 categories: 前端技术
 ---
-参考《javascript设计模式》[美]Addy Osmani一书，下面介绍使用javascript经常会使用的主要设计模式。本博文是使用ES5语法【上】，还有一个【下】篇，ES6语法会单独写个博客。
-这里主要是一下几个设计模式：
+参考《javascript设计模式》[美]Addy Osmani一书，下面介绍使用javascript经常会使用的主要设计模式。本博文是使用ES5语法的【上】篇，还有一个【下】篇，ES6语法会单独写个博客。
+主要是以下几个设计模式：
 
 - Constructor Pattern 构造模式
 - Module Pattern 模块化模式
