@@ -1,5 +1,5 @@
 ---
-title: ECharts 3.0底层zrender 3.x源码分析2-Painter（V层）
+title: ECharts 3.0底层zrender 3.x源码分析1-总体架构
 tags:    
 - FE
 - ECharts
@@ -7,6 +7,7 @@ tags:
 - 源码   
 categories: 前端技术
 ---
+
 zrender是一个轻量级的Canvas类库，作为百度[Echarts 3.0](http://echarts.baidu.com/index.html)的底层基础。截至目前查看的zrender源码和文档，包括官网文档都还停留在2.x时代，我打算用一个系列介绍下zrender 3.x的使用和源码，一些demo和没有在博客中介绍的源码请进我的[github仓库](https://github.com/zrysmt/echarts3/tree/master/zrender)。
 >https://github.com/zrysmt/echarts3/tree/master/zrender
 
@@ -272,7 +273,7 @@ function(zrender, Circle, Polygon) { //... ...
 });
 ```
 ## 4.2 继承
-在core->util.js，主要的思想就是将子类的prototype指向父类的prototype；子类的构造函数之指向自己。
+在core->util.js，主要的思想就是将子类的prototype指向父类的prototype；子类的构造函数指向自己。
 ```javascript
    function inherits(clazz, baseClazz) {
        var clazzPrototype = clazz.prototype;
@@ -286,13 +287,14 @@ function(zrender, Circle, Polygon) { //... ...
        clazz.superClass = baseClazz;//superClass是个自己定义的属性
    }
 ```
-另外不要忘了，在构造函数中应该重写父类的属性。
+另外不要忘了，在构造函数中应该重写父类的属性。例如：Displayable的父类是Element:
+
 ```javascript
 function Displayable(opts) {
      Element.call(this, opts);
 }
 ```
-调用
+实现继承：
 ```javascript
 zrUtil.inherits(Displayable, Element);
 ```
@@ -345,7 +347,8 @@ util.mixin(Handler, Eventful);
 # 5.逻辑关系
 
 - 步进关系
--->为扩展或混入，==>为继承自父类，（）内部为所在位置, [ ]为扩展或者混入的方式。
+
+说明：-->为扩展或混入，==>为继承自父类，（）内部为所在位置, [ ]为扩展或者混入的方式。
 
 `Element`[Animatable Transformable Eventful] (Element.js) ==> 
 `Displayable`[ReactText] (Displayable.js) ==> 
@@ -368,6 +371,3 @@ util.mixin(Handler, Eventful);
 - [ZRender源码分析系列](http://www.cnblogs.com/hhstuhacker/category/603743.html)
 - [ZRender源码分析系列源码注释](https://github.com/lonelyclick/nts/tree/master/zrender/src)
 - [HTML5 Canvas绘制的图形的事件处理](http://blog.csdn.net/vuturn/article/details/45822905)
-
-
-
