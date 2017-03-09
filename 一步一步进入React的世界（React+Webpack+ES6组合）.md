@@ -226,6 +226,13 @@ page: "./src/app.js"
 }
 ```
 # 6. React支持热插拔
+webpack-dev-server支持热插拔（热替换 HRM），使用HRM功能也有两种方式：命令行方式和Node.js API 方式。
+## 6.1 Node.js API方式
+Node.js API方式需要做三个配置：
+1) 把`webpack/hot/dev-server`加入到webpack配置文件的entry项；
+2) 把`new webpack.HotModuleReplacementPlugin()`加入到webpack配置文件的plugins项；
+3) 把`hot:true`加入到webpack-dev-server的配置项里面。
+
 使用 react 编写代码时，能让修改的部分自动刷新。但这和自动刷新网页是不同的，因为 hot-loader 并不会刷新网页，而仅仅是替换你修改的部分
 - 安装
 ```bash
@@ -241,10 +248,9 @@ npm i --save-dev react-hot-loader webpack-dev-server
 }
 ```
 - 修改webpack.config.js
+
 ```javascript
 var webpack = require('webpack');
-
-
 module.exports = {
     //修改：entry
     entry: [
@@ -260,9 +266,6 @@ module.exports = {
     },
     module: {
         loaders: [
-            // { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },//支持es6
-            // {test:/\.jsx?$/,exclude: /node_modules/,loader:'jsx-loader?harmony'},//支持react
-            // {test:/\.jsx?$/,exclude: /node_modules/,loader:'babel?presets[]=react,presets[]=es2015'},//同时支持es6 react或者
             { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel', query: { presets: ['es2015', 'react'] } }, //同时支持es6 react
             { test: /\.css$/, loader: "style!css" },
             { test: /\.scss$/, loader: "style!css!sass" }, //sass加载器
@@ -305,8 +308,19 @@ node server.js  //启动node服务
 ```
 在浏览器输入`localhost:3000`即可查看结果，我们修改css文件，保存之后网页会自动刷新显示在浏览器上。
 
+## 6.2 命令行方式
+命令行方式比较简单，只需要加入`--inline --hot`。
+例子位置在我的[github](https://github.com/zrysmt/react-website/tree/master/mysite02)。
+> https://github.com/zrysmt/react-website/tree/master/mysite02
 
-> 可以在我的[github](https://github.com/zrysmt/react-demo)  https://github.com/zrysmt/react-demo中clone或者fork，本博文对应demo01
+这个例子中执行的命令是：
+```bash
+webpack-dev-server --history-api-fallback --progress --profile --inline --colors --hot --port 4000
+```
+
+
+
+> 可以在我的[github](https://github.com/zrysmt/react-demo)  https://github.com/zrysmt/react-demo中clone或者fork，本博文对应demo01和demo04
 
 
 参考阅读：
@@ -316,3 +330,4 @@ node server.js  //启动node服务
 - [【译】 在 React.js 中使用 ES6+](http://www.open-open.com/lib/view/open1442217632805.html)
 - [React.js中常用的ES6写法总结](http://blog.csdn.net/haoshidai/article/details/52244620)
 - [使用 react-hot-loader](https://segmentfault.com/a/1190000004660311)
+- [WEBPACK DEV SERVER说明](http://www.jianshu.com/p/941bfaf13be1)
