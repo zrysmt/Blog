@@ -4,6 +4,7 @@ tags:
 - javascript
 - 数据结构
 categories: 数据结构
+date: 2016-10-09 00:00:00
 ---
 
 后进先出（LIFO,last-in-first-out）的数据结构

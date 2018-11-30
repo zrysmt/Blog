@@ -6,6 +6,7 @@ tags:
 - 源码
 - js原生实现库      
 categories: 前端技术
+date: 2016-12-05 00:00:00
 ---
 上面的博文介绍的都是源码src下的zepto.js文件，接着我们来看看zepto的事件模块，对应文件是event.js
 

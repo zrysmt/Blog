@@ -2,6 +2,7 @@
 title: File Input多次添加文件，动态删除文件，用来实现上传等操作
 tags: FE
 categories: 前端技术
+date: 2016-09-27 00:00:00
 ---
 ### 1.需求图示
 ![实现](https://raw.githubusercontent.com/zrysmt/mdPics/master/file%20input.png)

@@ -4,6 +4,7 @@ tags:
 - TCP/IP
 - 图解TCP/IP
 categories: HTTP/TCP/IP
+date: 2016-11-08 00:00:00
 ---
 # 1.分层
 OSI参考模型分为7层，TCP/IP分为四层。

@@ -4,6 +4,7 @@ tags:
 - React
 - React Router   
 categories: 前端技术
+date: 2016-11-04 00:00:00
 ---
 本博文提供一个单网页结构网页（SPA）使用React Router路由控制跳转的完整例子。
 > 可以在我的[github](https://github.com/zrysmt/react-demo/tree/master/demo03) 中clone或者fork

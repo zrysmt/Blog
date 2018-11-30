@@ -5,6 +5,7 @@ tags:
 - CSS
 - CSS3
 categories: 前端技术
+date: 2016-09-27 19:27:49
 ---
 # 1.介绍
 - @font-face是CSS3中的一个模块，他主要是把自己定义的Web字体嵌入到你的网页中，不用担心兼容性，@font-face在IE4中都支持。

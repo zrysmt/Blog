@@ -6,6 +6,7 @@ tags:
 - 源码
 - js原生实现库    
 categories: 前端技术
+date: 2016-12-05 00:00:00
 ---
 上面的博文介绍的都是源码src下的基础模块`zepto.js`文件和事件模块`event.js`，下面接着看另外一个独立的模块--ajax模块`ajax.js`
 

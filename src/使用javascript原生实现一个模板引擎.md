@@ -6,6 +6,7 @@ tags:
 - 模板引擎
 - js原生实现库
 categories: 前端技术
+date: 2016-12-05 00:00:00
 ---
 模板引擎分为**前端**和**后端**的，前端常用的模板引擎如artTemplate,[juicer](http://www.juicer.name/docs/docs_zh_cn.html)渲染是在客户端完成的；后端的模板引擎如基于PHP的[smarty](http://www.smarty.net/docs/zh_CN/),渲染是服务器完成的。
 

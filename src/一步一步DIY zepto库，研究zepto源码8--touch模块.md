@@ -6,6 +6,7 @@ tags:
 - 源码
 - js原生实现库    
 categories: 前端技术
+date: 2016-12-05 00:00:00
 ---
 由于移动端众所周知的click 300ms延迟的缘故（用户碰触页面之后，需要等待一段时间来判断是不是双击（double tap）动作，而不是立即响应单击（click），等待的这段时间大约是300ms）。移动事件提供了`touchstart`、`touchmove`、`touchend`，却没有提供对`tap`的支持。许多主流框架都是自定义实现了tap事件，消除300ms的延迟，当然包括Zepto.js。
 

@@ -6,6 +6,7 @@ tags:
 - 源码
 - js原生实现库    
 categories: 前端技术
+date: 2016-12-05 00:00:00
 ---
 > 代码挂在我的[github](https://github.com/zrysmt/DIY-zepto)上，对应文件夹v0.7.1。
 > https://github.com/zrysmt/DIY-zepto

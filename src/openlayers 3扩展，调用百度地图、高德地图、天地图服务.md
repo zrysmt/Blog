@@ -5,6 +5,7 @@ tags:
 - 地图
 - WebGIS
 categories: WebGIS
+date: 2017-03-28 00:00:00
 ---
 调用这三个商业地图服务，我们使用的都是切片（Tile）地图服务，关于切片地图的含义这里做简单的介绍：
 切片地图就是指将显示的地图切成一块一块的(256 * 256)分别显示加载。openlayers 3中有这样图层加载类，`ol.layer.Tile`,对应的source类有`ol.source.TileImage`,`ol.source.XYZ`,这两者的关系通过源码可以看到

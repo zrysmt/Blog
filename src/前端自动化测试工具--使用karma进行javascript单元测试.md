@@ -7,6 +7,7 @@ tags:
 - Karma
 - 自动化测试
 categories: 前端技术
+date: 2016-10-11 00:00:00
 ---
 前面我写了一篇博客是《前端自动化测试工具PhantomJS+CasperJS结合使用教程》其中使用CasperJS不仅可以进行单元测试，还可以进行浏览器测试，是个很不错的工具，今天介绍的工具是Karma+Jasmine+PhantomJS组合的前端javascript单元测试工具。
 # 1.介绍

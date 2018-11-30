@@ -6,6 +6,7 @@ tags:
 - CasperJS
 - 自动化测试
 categories: 前端技术
+date: 2016-10-11 00:00:00
 ---
 > 下面的安装测试基于window系统（win10）
 

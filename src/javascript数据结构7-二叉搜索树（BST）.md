@@ -4,6 +4,7 @@ tags:
 - javascript
 - 数据结构
 categories: 数据结构
+date: 2016-10-09 00:00:00
 ---
 ## 二叉树 ：
 ![这里写图片描述](http://img.blog.csdn.net/20151110101942285)

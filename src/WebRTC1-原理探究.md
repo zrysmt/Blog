@@ -5,6 +5,7 @@ tags:
 - HTML5
 - WebRTC
 categories: 前端技术
+date: 2016-09-28 00:00:00
 ---
 ### 1.抛砖引玉   
 `WebRTC (Web Real-Time Communications)` 是一项实时通讯技术，它允许网络应用或者站点，在不借助中间媒介的情况下，建立浏览器之间点对点（Peer-to-Peer）的连接，实现视频流或/和音频流或者其他任意数据的传输      

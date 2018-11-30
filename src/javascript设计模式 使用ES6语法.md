@@ -4,6 +4,7 @@ tags:
 - javascript
 - 设计模式
 categories: 前端技术
+date: 2017-01-03 00:00:00
 ---
 参考《javascript设计模式》[美]Addy Osmani一书，下面介绍使用javascript经常会使用的主要设计模式。本博文为ES6语法的博客，还有使用ES5语法的【上】【下】两篇。
 主要是以下几个设计模式：

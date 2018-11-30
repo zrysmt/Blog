@@ -4,6 +4,7 @@ tags:
 - HTTP协议
 - HTTP协议实践
 - 浏览器缓存
+date: 2016-09-27 00:00:00
 categories: HTTP/TCP/IP
 ---
 # 1.浏览器缓存

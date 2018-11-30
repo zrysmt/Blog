@@ -5,6 +5,7 @@ tags:
 - DOMContentLoaded
 - domReady
 categories: 前端技术
+date: 2016-11-10 20:16:20
 ---
 domReady机制是很多框架和库都具有的种子模块，使用了在DOM树解析完成后就立即响应，不用等待图片等资源下载完成（onload执行时候表示这些资源完全下载完成）的一种机制，那怎么实现呢。
 

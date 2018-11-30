@@ -5,6 +5,7 @@ tags:
 - javascript
 - webpack
 categories: 前端技术
+date: 2016-09-28 00:00:00
 ---
 本文在webpack基础实践1的基础上，主要阐述的是模块化和ES6与webpack的结合使用。
 # 1.模块化

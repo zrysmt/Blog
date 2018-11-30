@@ -5,6 +5,7 @@ tags:
 - jQuery
 - js原生实现库    
 categories: 前端技术
+date: 2016-10-05 00:00:00
 ---
 
 【注】所有代码挂在我的[github](https://github.com/zrysmt/DIY-jQuery)上

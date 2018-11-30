@@ -6,6 +6,7 @@ tags:
 - zrender
 - 源码   
 categories: 前端技术
+date: 2017-01-11 00:00:00
 ---
 这一篇，介绍下Handler处理机制。
 

@@ -6,6 +6,7 @@ tags:
 - zrender
 - 源码   
 categories: 前端技术
+date: 2017-01-11 00:00:00
 ---
 
 zrender是一个轻量级的Canvas类库，作为百度[Echarts 3.0](http://echarts.baidu.com/index.html)的底层基础。截至目前查看的zrender源码和文档，包括官网文档都还停留在2.x时代，我打算用一个系列介绍下zrender 3.x的使用和源码，一些demo和没有在博客中介绍的源码请进我的[github仓库](https://github.com/zrysmt/echarts3/tree/master/zrender)。

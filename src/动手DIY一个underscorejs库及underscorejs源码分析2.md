@@ -6,6 +6,7 @@ tags:
 - 源码
 - js原生实现库
 categories: 前端技术
+date: 2016-10-26 00:00:00
 ---
 
 接着第一篇《动手DIY一个underscorejs库及underscorejs源码分析1》

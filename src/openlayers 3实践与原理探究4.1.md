@@ -6,6 +6,7 @@ tags:
 - js库
 - WebGIS
 categories: WebGIS
+date: 2016-09-28 00:00:00
 ---
 因为下面的内容会分模块介绍源码，所以这里为了方便，首先介绍源码的目录结构
 在OpenLayers 3官网的[下载页面](http://openlayers.org/download/)下载我们在开发工程中需要的文件(如：v3.17.1.zip)，注意如果需要编译源代码，需要下载包含编译功能的文件包：https://github.com/openlayers/ol3/releases 下载指定release版本的源码，注意是Source code (zip)或者Source code (tar.gz)。

@@ -6,6 +6,7 @@ tags:
 - es6
 - rollup
 categories: 前端技术
+date: 2016-10-02 00:00:00
 ---
 简单说下rollup就是只将调用过的模块打包，做到尽量精简的打包。
 

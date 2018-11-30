@@ -5,6 +5,7 @@ tags:
 - jQuery
 - js原生实现库    
 categories: 前端技术
+date: 2016-10-05 00:00:00
 ---
 
 本博文使用了rollup打包，这里同时提供了简明的搭建环境的说明，通过第一部分`1.环境搭建`就可以在本地配置搭建环境。有关rollup的详细安装使用说明可以查看我的另外一篇博客：[《rollup + es6最佳实践》](http://blog.csdn.net/future_todo/article/details/52725176)

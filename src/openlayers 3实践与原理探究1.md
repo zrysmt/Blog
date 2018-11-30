@@ -6,6 +6,7 @@ tags:
 - js库
 - WebGIS
 categories: WebGIS
+date: 2016-09-28 00:00:00
 ---
 本文的重点在OpenLayers 3，对于OpenLayers 2简单比较说明。
 下文中OpenLayers 2简称OL2，OpenLayers 3简称OL3

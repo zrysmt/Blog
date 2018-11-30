@@ -6,6 +6,7 @@ tags:
 - 源码
 - js原生实现库    
 categories: 前端技术
+date: 2016-10-26 00:00:00
 ---
 [Underscore](http://github.com/jashkenas/underscore/) 是一个 JavaScript 工具库,它提供一整套函数编程的实用功能。他弥补了 [jQuery](http://jquery.com/) 没有实现的功能，同时又是[Backbone](http://backbonejs.org/) 必不可少的部分。
 

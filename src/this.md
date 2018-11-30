@@ -4,6 +4,7 @@ tags:
 - FE
 - javascript
 categories: 前端技术
+date: 2016-09-28 00:00:00
 ---
 文章只是简单列举了方式和一些会改变this指针的情况     
 

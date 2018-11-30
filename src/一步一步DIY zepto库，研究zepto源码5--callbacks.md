@@ -6,6 +6,7 @@ tags:
 - 源码
 - js原生实现库    
 categories: 前端技术
+date: 2016-12-05 00:00:00
 ---
 Callbacks API用来管理回调函数，也作为deferred延迟对象的基础部分，今天就一起来探寻它的源码（对应src下的callbacks.js）。
 

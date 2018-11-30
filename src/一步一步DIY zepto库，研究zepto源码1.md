@@ -6,6 +6,7 @@ tags:
 - 源码
 - js原生实现库    
 categories: 前端技术
+date: 2016-12-05 00:00:00
 ---
 
 我在之前写了《一步一步DIY jQuery库》系列文章，然后发现再往下进行研究jQuery库的时候，由于jQuery库做了很多兼容IE6-8的内容，使其看起来比较繁琐，这也造成了jQuery源码的不宜读性。所幸作为移动端的jQuery库替代品-[Zepto](http://zeptojs.com/),是一个轻量级的**针对现代高级浏览器的JavaScript库， **它与jquery有着类似的api。**Zepto**的设计目的是**提供 jQuery 的类似的API**，但并不是100%覆盖 jQuery。

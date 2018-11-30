@@ -4,6 +4,7 @@ tags:
 - 爬虫
 - PHP
 categories: PHP
+date: 2016-10-13 00:00:00
 ---
 
 第一篇文章介绍了使用原生的PHP和PHP的扩展库实现了爬虫技术。本文尝试使用PHP爬虫框架来写，首先对三种爬虫技术[phpQuery](https://github.com/punkave/phpQuery)，[PHPcrawer](http://phpcrawl.cuab.de/)， snoopy进行对比，然后分析模拟浏览器行为的方式，重点介绍下snoopy

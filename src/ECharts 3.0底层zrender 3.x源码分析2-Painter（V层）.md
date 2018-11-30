@@ -6,6 +6,7 @@ tags:
 - zrender
 - 源码   
 categories: 前端技术
+date: 2017-01-11 00:00:00
 ---
 上一篇介绍了zrender的总体结构，这一篇我们就详细介绍View层--Painter(Painter.js)。
 

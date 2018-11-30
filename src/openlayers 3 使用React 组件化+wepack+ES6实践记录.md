@@ -6,6 +6,7 @@ tags:
 - React
 - WebGIS
 categories: WebGIS
+date: 2017-03-10 00:00:00
 ---
 
 本博文不作深入研究内容，只用来记录使用React 组件化+wepack+ES6技术操作Openlayers 3 实践中遇到的问题，本博文作为开篇，所以只是简单的demo案例说明。后面还会有其他的一些博文分享我在项目中遇到的问题和总结的经验。

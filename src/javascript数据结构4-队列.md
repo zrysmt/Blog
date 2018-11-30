@@ -4,6 +4,7 @@ tags:
 - javascript
 - 数据结构
 categories: 数据结构
+date: 2016-10-09 00:00:00
 ---
 队列是一种先进先出（FIFO，first-in-first-out）的数据结构
 

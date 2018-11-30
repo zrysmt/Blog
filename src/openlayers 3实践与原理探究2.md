@@ -6,6 +6,7 @@ tags:
 - js库
 - WebGIS
 categories: WebGIS
+date: 2016-09-28 00:00:00
 ---
 【注】所有代码挂在我的[github](https://github.com/zrysmt/openlayers-3)上
 
